@@ -1,0 +1,26 @@
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+button:hover {
+  border: none;
+}
+button.btn-start {
+  background-color: #659a65;
+}
+button.btn-reset {
+  background-color: #658a9a;
+}
+button.btn-stop {
+  background-color: #f28e8e;
+}
+button.disabled {
+  opacity: 0.3;
+}
