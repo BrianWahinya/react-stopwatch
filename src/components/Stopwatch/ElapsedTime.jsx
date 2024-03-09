@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { format } from "../../helpers/utils";
 
-const ElapsedTime = ({ isRunning, beginTime }) => {
+const ElapsedTime = ({ isRunning, beginTime, onReset }) => {
   const [elapsedTime, setElapsedTime] = useState(0);
 
   const timerRef = useRef(null);
 
   useEffect(() => {
-    if (!isRunning && Date.now() - beginTime == 0) {
+    if (!isRunning && onReset) {
       setElapsedTime(0);
     }
     if (isRunning) {
