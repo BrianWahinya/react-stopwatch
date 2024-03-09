@@ -7,7 +7,6 @@ const ElapsedTime = ({ isRunning, beginTime }) => {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    setElapsedTime(Date.now() - beginTime);
     if (!isRunning && Date.now() - beginTime == 0) {
       setElapsedTime(0);
     }
