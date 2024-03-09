@@ -1,6 +1,6 @@
 ## React Stopwatch
 
-[Stopwatch website](https://brian-flask-weather-app.onrender.com/)
+[Stopwatch website](https://brian-react-stopwatch.netlify.app/)
 
 Stopwatch with start, stop, and reset functionalities
 
