@@ -14,8 +14,10 @@ function App() {
       </div>
       <Stopwatch />
       <div className="footer">
+        <span>{new Date().getFullYear()} &copy;</span>
         <a href="https://brianwebportal.netlify.app" target="_blank">
-          {new Date().getFullYear()} &copy; Brian Wahinya
+          {" "}
+          Brian Wahinya{" "}
         </a>
       </div>
     </>

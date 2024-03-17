@@ -21,6 +21,8 @@ button.btn-reset {
 button.btn-stop {
   background-color: #f28e8e;
 }
-button.disabled {
+button.disabled, button:disabled {
   opacity: 0.3;
+  pointer-events: all;
+  cursor: not-allowed;
 }

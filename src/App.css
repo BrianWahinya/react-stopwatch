@@ -28,3 +28,7 @@
   color: #888;
   transition: text-decoration 1s;
 }
+
+.footer span{
+  font-weight: 500;
+}
