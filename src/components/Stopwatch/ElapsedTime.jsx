@@ -1,24 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { format } from "../../helpers/utils";
 
 const ElapsedTime = ({ isRunning, beginTime, onReset }) => {
-  const [elapsedTime, setElapsedTime] = useState(0);
-
-  const timerRef = useRef(null);
+  const elapsedRef = useRef(null);
 
   useEffect(() => {
+    let timer;
     if (!isRunning && onReset) {
-      setElapsedTime(0);
+      elapsedRef.current.textContent = format(0);
     }
     if (isRunning) {
-      timerRef.current = setInterval(() => {
-        setElapsedTime(Date.now() - beginTime);
+      timer = setInterval(() => {
+        elapsedRef.current.textContent = format(Date.now() - beginTime);
       }, 10);
     }
-    return () => clearInterval(timerRef.current);
-  }, [isRunning, beginTime]);
+    return () => clearInterval(timer);
+  }, [isRunning, onReset, beginTime]);
 
-  return <h1>{format(elapsedTime)}</h1>;
+  return <h1 ref={elapsedRef}>{format(0)}</h1>;
 };
 
 export default ElapsedTime;
